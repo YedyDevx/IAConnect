@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className="font-sans antialiased" style={{ fontFamily: "Arial, sans-serif" }}>
+			<body className="font-sans">
 				<Header/>
 				{children}
 				<Footer/>
