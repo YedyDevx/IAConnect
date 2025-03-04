@@ -12,7 +12,7 @@ export default function Header() {
     <header className="w-full p-4">
       <nav className="max-w-[1300px] mx-auto p-2 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-[19px] font-bold flex flex-row gap-1 items-center">
+        <div className="text-[19px] font-bold flex flex-row gap-1 items-center select-none">
           <Image src="/images/logo.svg" alt="logo" width={28} height={28} />
           IAConnect
         </div>
@@ -99,7 +99,7 @@ export default function Header() {
           </div>
           <h1 className="flex flex-row gap-2 items-center justify-center text-gray-500">
             <BiCopyright />
-            <span>2025 IAConnect</span>
+            <span className="text-sm">2025 IAConnect</span>
           </h1>
         </div>
       </nav>
