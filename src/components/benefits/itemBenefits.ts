@@ -21,16 +21,16 @@ const itemBenefits = [
 	},
 	{
 		id: 4,
+		title: "Aumento de conversaciones",
+		description: "Guía a los clientes en el proceso sin afectar la calidad del servicio.",
+		icon: FaChartLine,
+	},
+	{
+		id: 5,
 		title: "Escalabilidad",
 		description: "Aumenta la capacidad de atención sin necesidad de contratar más personal.",
 		icon: FaComments,
 		image: "/images/img-benefits.svg",
-	},
-	{
-		id: 5,
-		title: "Aumento de conversaciones",
-		description: "Guía a los clientes en el proceso y cierra más ventas sin afectar la calidad del servicio.",
-		icon: FaChartLine,
 	},
 ];
 
