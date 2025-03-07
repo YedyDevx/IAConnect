@@ -1,108 +1,77 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
-import { IoMenuOutline, IoClose } from "react-icons/io5";
-import { useHeader } from "./useHeader";
-import { BiCopyright } from "react-icons/bi";
 
-export default function Header() {
-  const { isMenuOpen, toggleMenu } = useHeader();
+interface HeaderProps {
+  nivel?: number;
+  titulo?: string;
+}
 
+export default function Header({ nivel, titulo }: HeaderProps) {
   return (
-    <header className="w-full p-4">
-      <nav className="max-w-[1300px] mx-auto p-2 flex justify-between items-center">
-        {/* Logo */}
-        <div className="text-[19px] font-bold flex flex-row gap-1 items-center select-none">
-          <Image src="/images/logo.svg" alt="logo" width={28} height={28} />
-          IAConnect
-        </div>
-        {/* Menu */}
-        <div className="gap-10 bg-[#fbfcff] rounded-lg px-14 py-4 hidden md:flex">
-          <div className="text-sm font-semibold cursor-pointer">Inicio</div>
-          <div className="text-sm text-gray-400 cursor-pointer hover:text-[#4e47ff] transition-all duration-300">
-            Beneficios
-          </div>
-          <div className="text-sm text-gray-400 cursor-pointer hover:text-[#4e47ff] transition-all duration-300">
-            Planes
-          </div>
-          <div className="text-sm text-gray-400 cursor-pointer hover:text-[#4e47ff] transition-all duration-300">
-            FAQ
-          </div>
-        </div>
-
-        <button
-          type="button"
-          className="w-[153px] hidden md:block bg-[#4e47ff] text-white cursor-pointer hover:bg-[#4942f2] transition-all duration-300 py-2 rounded-lg"
-        >
-          Contactanos
-        </button>
-
-        {/* Menu Mobile */}
-        <div className="md:hidden" onClick={toggleMenu}>
-          {!isMenuOpen && <IoMenuOutline className="text-3xl cursor-pointer" />}
-          {isMenuOpen && <IoClose className="text-3xl cursor-pointer" />}
-        </div>
-
-        <div
-          className={`fixed transition-all duration-500 inset-0 bg-gray-800 ${
-            isMenuOpen ? "opacity-25 z-40" : "opacity-0 -z-10"
-          }`}
-          onClick={toggleMenu}
-        />
-        {/* Menú lateral */}
-        <div
-          className={`fixed left-0 top-0 h-full w-1/2 flex flex-col justify-between bg-white p-4 shadow-lg transform transition-all duration-500 z-50 ${
-            isMenuOpen ? "translate-x-0" : "-translate-x-full"
-          }`}
-        >
-          <div className="flex flex-col gap-8">
-            <Link
+    <header className="bg-white border-b border-gray-200 ">
+      <div className="max-w-6xl mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <Link 
               href="/"
-              className="flex flex-row gap-2 items-center text-lg font-bold"
+              className="text-blue-600 hover:text-blue-700 flex items-center gap-2 font-medium"
             >
-              <Image src="/images/logo.svg" alt="logo" width={28} height={28} />
-              IAConnect
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                />
+              </svg>
+              <span>Inicio</span>
             </Link>
-
-            <div className="flex flex-col text-lg text-gray-600 gap-4">
-              <Link
-                href="/"
-                className="font-semibold cursor-pointer transition-all duration-300"
-              >
-                Inicio
-              </Link>
-              <Link
-                href="/beneficios"
-                className="hover:text-[#4e47ff] cursor-pointer transition-all duration-300"
-              >
-                Beneficios
-              </Link>
-              <Link
-                href="/planes"
-                className="hover:text-[#4e47ff] cursor-pointer transition-all duration-300"
-              >
-                Planes
-              </Link>
-              <Link
-                href="/faq"
-                className="hover:text-[#4e47ff] cursor-pointer transition-all duration-300"
-              >
-                FAQ
-              </Link>
-            </div>
-            <button
-              type="button"
-              className="w-full bg-[#4e47ff] text-white cursor-pointer hover:bg-[#4942f2] transition-all duration-300 py-1.5 rounded-lg"
-            >
-              Contactanos
-            </button>
+            {nivel && (
+              <>
+                <span className="text-gray-400">/</span>
+                <div className="flex items-center">
+                  <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">
+                    Nivel {nivel}
+                  </span>
+                </div>
+              </>
+            )}
           </div>
-          <h1 className="flex flex-row gap-2 items-center justify-center text-gray-500">
-            <BiCopyright />
-            <span className="text-sm">2025 IAConnect</span>
-          </h1>
+          
+          {titulo && (
+            <h1 className="text-xl font-semibold text-gray-800">{titulo}</h1>
+          )}
+          
+          <div className="flex items-center gap-4">
+            <a
+              href="https://playcode.io/javascript"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              <svg
+                className="w-5 h-5 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                />
+              </svg>
+              Abrir Editor
+            </a>
+          </div>
         </div>
-      </nav>
+      </div>
     </header>
   );
 }
