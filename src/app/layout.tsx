@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import Header from "../components/shared/Header";
-import Footer from "@/components/shared/Footer";
 import "../styles/globals.css";
 export const metadata: Metadata = {
-  title: "IAConnect",
-  description: "Automatiza tus procesos con nuestro chatbots",
+  title: "Laboratorio de codigo",
+  description: "Aprende a programar con nuestros ejercicios",
   icons: {
-    icon: "/images/logo.svg",
+    icon: "/images/logoz.png",
   },
 };
 
@@ -16,12 +14,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="font-sans">
-        <Header />
-        {children}
-        <Footer />
-      </body>
+    <html lang="es">
+      <body className="font-sans bg-white">{children}</body>
     </html>
   );
 }
