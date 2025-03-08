@@ -25,19 +25,19 @@ export const ejercicios = [
       5. ¿Cómo usar el operador de coalescencia nula (??)?
       `,
   },
-  {
-    id: 3,
-    titulo: "Estructuras de Control",
-    instrucciones: `
-      Control de flujo en JavaScript:
+//   {
+//     id: 3,
+//     titulo: "Estructuras de Control",
+//     instrucciones: `
+//       Control de flujo en JavaScript:
   
-      1. ¿Cómo usar if-else para tomar decisiones?
-      2. ¿Cómo usar switch para múltiples casos?
-      3. ¿Cómo usar el bucle for para iteraciones?
-      4. ¿Cómo usar while y do-while?
-      5. ¿Cómo iterar sobre arrays con forEach?
-      `,
-  },
+//       1. ¿Cómo usar if-else para tomar decisiones?
+//       2. ¿Cómo usar switch para múltiples casos?
+//       3. ¿Cómo usar el bucle for para iteraciones?
+//       4. ¿Cómo usar while y do-while?
+//       5. ¿Cómo iterar sobre arrays con forEach?
+//       `,
+//   },
 ];
 
 export const respuestas = [
@@ -117,55 +117,55 @@ export const respuestas = [
   • Coalescencia nula (??) para valores por defecto
       `,
   },
-  {
-    id: 3,
-    codigo: `
-  // 1. if-else
-  let edad = 18;
-  if (edad >= 18) {
-      console.log("Es mayor de edad");
-  } else {
-      console.log("Es menor de edad");
-  }
+//   {
+//     id: 3,
+//     codigo: `
+//   // 1. if-else
+//   let edad = 18;
+//   if (edad >= 18) {
+//       console.log("Es mayor de edad");
+//   } else {
+//       console.log("Es menor de edad");
+//   }
   
-  // 2. switch
-  let dia = "Lunes";
-  switch (dia) {
-      case "Lunes":
-          console.log("Inicio de semana");
-          break;
-      default:
-          console.log("Otro día");
-  }
+//   // 2. switch
+//   let dia = "Lunes";
+//   switch (dia) {
+//       case "Lunes":
+//           console.log("Inicio de semana");
+//           break;
+//       default:
+//           console.log("Otro día");
+//   }
   
-  // 3. bucle for
-  for (let i = 0; i < 5; i++) {
-      console.log(i);  // 0,1,2,3,4
-  }
+//   // 3. bucle for
+//   for (let i = 0; i < 5; i++) {
+//       console.log(i);  // 0,1,2,3,4
+//   }
   
-  // 4. while y do-while
-  let contador = 0;
-  while (contador < 3) {
-      console.log(contador++);
-  }
+//   // 4. while y do-while
+//   let contador = 0;
+//   while (contador < 3) {
+//       console.log(contador++);
+//   }
   
-  do {
-      console.log("Se ejecuta al menos una vez");
-  } while (false);
+//   do {
+//       console.log("Se ejecuta al menos una vez");
+//   } while (false);
   
-  // 5. forEach
-  let frutas = ["manzana", "pera", "uva"];
-  frutas.forEach(fruta => {
-      console.log(fruta);
-  });`,
-    descripcion: `
-  🔍 Conceptos utilizados:
+//   // 5. forEach
+//   let frutas = ["manzana", "pera", "uva"];
+//   frutas.forEach(fruta => {
+//       console.log(fruta);
+//   });`,
+//     descripcion: `
+//   🔍 Conceptos utilizados:
   
-  • Condicionales: if-else, switch
-  • Bucles: for, while, do-while
-  • Métodos de array: forEach
-  • break para salir de switch/bucles
-  • Funciones flecha en callbacks
-      `,
-  },
+//   • Condicionales: if-else, switch
+//   • Bucles: for, while, do-while
+//   • Métodos de array: forEach
+//   • break para salir de switch/bucles
+//   • Funciones flecha en callbacks
+//       `,
+//   },
 ];
