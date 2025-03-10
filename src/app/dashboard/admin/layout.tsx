@@ -11,7 +11,7 @@ interface DashboardLayoutProps {
 
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
 	return (
-		<div className="relative flex h-screen w-full justify-center items-center p-5">
+		<body className="relative flex h-screen w-full justify-center items-center p-5">
 			<div className="absolute inset-0 -z-10">
 				<BackgroundDash />
 			</div>
@@ -21,13 +21,13 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
 					<NavbarAdmin />
 					<div className="flex-1">
 						<DashboardHeader titulo="Seguimiento de Aprendices" />
-						<div className="mt-4 bg-[#101010] p-4 rounded-lg text-white">
+						<main className="mt-4 bg-[#101010] p-4 rounded-lg text-white">
 							{children}
-						</div>
+						</main>
 					</div>
 					<DashboardAside />
 				</div>
 			</section>
-		</div>
+		</body>
 	);
 }
