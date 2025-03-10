@@ -1,12 +1,12 @@
 "use client";
 import BackgroundAuth from "@/components/background/bg-auth";
-import Login from "@/components/auth/login";
+import Register from "@/components/auth/register";
 
-export default function LoginPage() {
+export default function RegisterPage() {
 	return (
 		<main className="relative h-screen flex items-center justify-center">
 			<BackgroundAuth />
-			<Login />
+			<Register/>
 		</main>
 	);
 }
