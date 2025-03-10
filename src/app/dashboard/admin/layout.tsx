@@ -15,7 +15,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
 			<div className="absolute inset-0 -z-10">
 				<BackgroundDash />
 			</div>
-			<section className="w-full h-full bg-[#2c2c2cbb] flex p-5 rounded-2xl flex-col gap-5 relative z-10">
+			<section className="w-full h-full bg-[#2c2c2cbb] flex p-5 rounded-2xl flex-col gap-5 relative z-10 ">
 				<DashboardName />
 				<div className="w-full h-full flex gap-5">
 					<NavbarAdmin />
