@@ -15,7 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className="font-sans bg-white">{children}</body>
+      <body className="font-sans bg-white">
+        {children}
+        {/* <footer className="text-center bg-white flex items-center justify-center text-gray-600">
+          <p>Desarrollado por: SebastianDevp</p>
+        </footer> */}
+      </body>
     </html>
   );
 }

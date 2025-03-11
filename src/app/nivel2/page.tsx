@@ -164,9 +164,6 @@ export default function Page() {
           </div>
         </div>
 
-        <footer className="text-center flex justify-center w-full text-gray-600 mt-8 pb-6">
-          <p>Desarollado por: SebastianDevp & </p>
-        </footer>
       </main>
     </div>
   );

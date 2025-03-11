@@ -21,7 +21,7 @@ export default function Home() {
             {/* Nivel 1 Card */}
             <Link href="/nivel1" className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 group-hover:border-blue-300">
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 mb-4">
                   <div className="bg-blue-500 rounded-lg p-3">
                     <svg
                       className="w-6 h-6 text-white"
@@ -38,7 +38,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <h2 className="text-2xl font-semibold text-gray-800">
-                    Nivel 1: Fundamentos
+                    Nivel 1
                   </h2>
                 </div>
                 <p className="text-gray-600">
@@ -81,7 +81,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <h2 className="text-2xl font-semibold text-gray-800">
-                    Nivel 2: Operaciones
+                    Nivel 2
                   </h2>
                 </div>
                 <p className="text-gray-600">
@@ -124,11 +124,11 @@ export default function Home() {
                     </svg>
                   </div>
                   <h2 className="text-2xl font-semibold text-gray-800">
-                    Nivel 3: Arrays
+                    Nivel 3
                   </h2>
                 </div>
                 <p className="text-gray-600">
-                  Trabajando con arrays y estructuras de datos.
+                  Trabajando con estructuras de control y ciclos.
                 </p>
                 <div className="mt-4 flex items-center text-purple-500 font-medium group-hover:text-purple-600">
                   Descubrir
@@ -148,9 +148,6 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <footer className="text-center bg-white flex items-center justify-center text-gray-600">
-          <p>Desarrollado por: SebastianDevp</p>
-        </footer>
       </main>
     </div>
   );
