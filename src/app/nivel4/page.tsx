@@ -9,7 +9,7 @@ export default function Page() {
 
   return (
     <div className="min-h-screen bg-gray-900">
-      <Header nivel={3} titulo="Estructuras de Control" />
+      <Header nivel={4} titulo="Funciones y Scope" />
       <main className="max-w-6xl mx-auto min-h-screen p-6 flex flex-col gap-6">
         <header className="text-center mb-8">
           <h1 className="text-4xl font-bold text-white mb-2">
@@ -88,8 +88,8 @@ export default function Page() {
               </div>
             </div>
 
-            {/* Progreso del nivel */}
-            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700">
+           {/* Progreso del nivel */}
+           <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-lg font-semibold text-white">Progreso</h3>
                 <span className="text-sm text-blue-400">

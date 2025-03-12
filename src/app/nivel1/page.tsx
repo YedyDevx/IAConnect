@@ -8,20 +8,20 @@ export default function Page() {
   const [mostrarRespuesta, setMostrarRespuesta] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-900">
       <Header nivel={1} titulo="Variables y Tipos Básicos" />
-      <main className="max-w-6xl mx-auto min-h-screen p-6 flex flex-col gap-6 bg-white">
+      <main className="max-w-6xl mx-auto min-h-screen p-6 flex flex-col gap-6">
         <header className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-gray-800 mb-2">
+          <h1 className="text-4xl font-bold text-white mb-2">
             Aprende JavaScript
           </h1>
-          <p className="text-gray-600">
+          <p className="text-gray-400">
             Ejercicios prácticos para dominar los fundamentos
           </p>
         </header>
 
-        <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200 ">
-          <p className="text-yellow-800 flex items-center gap-2">
+        <div className="bg-yellow-900/30 p-4 rounded-lg border border-yellow-500/20 backdrop-blur-sm">
+          <p className="text-yellow-200 flex items-center gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -35,20 +35,17 @@ export default function Page() {
               />
             </svg>
             <strong>Nota:</strong> Estos ejercicios están diseñados para ser
-            resueltos en tu editor de código. Copia las instrucciones y
-            desarrolla la solución en tu entorno de desarrollo preferido.
+            resueltos en tu editor de código.
           </p>
         </div>
 
         <div className="w-full flex flex-row gap-4">
-          {/* CTA mejorado para PlayCode */}
-          <div className="w-[250px] flex-shrink-0">
-            <div className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 p-6 rounded-xl border border-blue-400/30 shadow-xl hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
-              {/* Efecto de brillo en el fondo */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent"></div>
-
-              <div className="flex flex-col gap-6 relative">
-                <div className="text-white">
+          {/* Panel lateral mejorado */}
+          <div className="w-[250px] flex-shrink-0 space-y-4">
+            <div className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 p-6 rounded-xl border border-blue-400/30 shadow-xl hover:shadow-blue-500/20 transition-all duration-300">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent rounded-lg"></div>
+                <div className="relative">
                   <div className="flex items-center gap-2 mb-3">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -64,48 +61,103 @@ export default function Page() {
                         d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                       />
                     </svg>
-                    <h3 className="text-xl font-bold">¿No tienes un editor?</h3>
+                    <h3 className="text-xl font-bold text-white">Editor Online</h3>
                   </div>
-                  <p className="text-blue-100 text-sm leading-relaxed">
-                    Usa PlayCode, un editor en línea gratuito perfecto para
-                    practicar JavaScript. No necesitas instalar nada.
+                  <p className="text-blue-100 text-sm leading-relaxed mb-4">
+                    Usa PlayCode para practicar JavaScript sin instalar nada.
                   </p>
-                </div>
-
-                <a
-                  href="https://playcode.io/javascript"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group bg-white hover:bg-blue-50 text-blue-600 px-4 py-3 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2"
-                >
-                  <span>Comenzar ahora</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 transform group-hover:translate-x-1 transition-transform duration-200"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
+                  <a
+                    href="https://playcode.io/javascript"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group bg-white/10 hover:bg-white/20 text-white px-4 py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition-all duration-200"
                   >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </a>
+                    <span>Comenzar ahora</span>
+                    <svg
+                      className="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Progreso del nivel */}
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-lg font-semibold text-white">Progreso</h3>
+                <span className="text-sm text-blue-400">
+                  {ejercicioActual + 1}/{ejercicios.length}
+                </span>
+              </div>
+              
+              {/* Barra de progreso */}
+              <div className="w-full h-2 bg-gray-700 rounded-full mb-6 overflow-hidden">
+                <div 
+                  className="h-full bg-gradient-to-r from-blue-500 to-blue-600 rounded-full transition-all duration-300"
+                  style={{ width: `${((ejercicioActual + 1) / ejercicios.length) * 100}%` }}
+                />
+              </div>
+
+              <div className="grid grid-cols-2 gap-2">
+                {ejercicios.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => {
+                      setEjercicioActual(index);
+                      setMostrarRespuesta(false);
+                    }}
+                    className={`relative group ${
+                      index === ejercicioActual
+                        ? "bg-gradient-to-r from-blue-500 to-blue-600"
+                        : "bg-gray-700/50 hover:bg-gray-700"
+                    } rounded-lg transition-all duration-300`}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg" />
+                    <div className="relative p-3 flex flex-col items-center">
+                      <span className={`text-sm font-medium ${
+                        index === ejercicioActual ? "text-white" : "text-gray-300"
+                      }`}>
+                        {index + 1}
+                      </span>
+                      {index <= ejercicioActual && (
+                        <div className="absolute -top-1 -right-1">
+                          <span className="flex h-3 w-3">
+                            <span className={`animate-ping absolute inline-flex h-full w-full rounded-full ${
+                              index === ejercicioActual ? "bg-blue-400" : "bg-green-400"
+                            } opacity-75`}></span>
+                            <span className={`relative inline-flex rounded-full h-3 w-3 ${
+                              index === ejercicioActual ? "bg-blue-500" : "bg-green-500"
+                            }`}></span>
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  </button>
+                ))}
               </div>
             </div>
           </div>
 
+          {/* Contenido principal */}
           <div className="space-y-6 w-full">
-            <div className="bg-white shadow-lg rounded-lg p-6 border border-gray-200">
-              <h2 className="text-2xl font-semibold mb-4">
+            <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 shadow-lg">
+              <h2 className="text-2xl font-semibold mb-4 text-white">
                 Ejercicio {ejercicios[ejercicioActual].id}:{" "}
                 {ejercicios[ejercicioActual].titulo}
               </h2>
 
-              <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                <h3 className="font-medium mb-4 text-lg">Instrucciones:</h3>
-                <pre className="whitespace-pre-wrap font-mono text-sm bg-white p-4 rounded border border-gray-300 overflow-auto">
+              <div className="bg-gray-900/50 p-6 rounded-lg border border-gray-700">
+                <h3 className="font-medium mb-4 text-lg text-gray-200">
+                  Instrucciones:
+                </h3>
+                <pre className="whitespace-pre-wrap font-mono text-sm bg-gray-800/50 text-gray-300 p-4 rounded-lg border border-gray-700 overflow-auto">
                   {ejercicios[ejercicioActual].instrucciones}
                 </pre>
               </div>
@@ -113,21 +165,21 @@ export default function Page() {
               <div className="mt-6">
                 <button
                   onClick={() => setMostrarRespuesta(!mostrarRespuesta)}
-                  className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 w-full mb-4"
+                  className="px-4 py-2 bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg hover:from-green-600 hover:to-green-700 w-full mb-4 transition-all duration-300 shadow-lg hover:shadow-green-500/25"
                 >
                   {mostrarRespuesta ? "Ocultar Respuesta" : "Ver Respuesta"}
                 </button>
 
                 {mostrarRespuesta && (
-                  <div className="bg-gray-50 p-6 rounded-lg border border-gray-200">
-                    <h3 className="font-medium mb-4 text-lg">
+                  <div className="bg-gray-900/50 p-6 rounded-lg border border-gray-700">
+                    <h3 className="font-medium mb-4 text-lg text-gray-200">
                       Solución Ejemplo:
                     </h3>
-                    <pre className="whitespace-pre-wrap font-mono text-sm bg-white p-4 rounded border border-gray-300 overflow-auto">
+                    <pre className="whitespace-pre-wrap font-mono text-sm bg-gray-800/50 text-gray-300 p-4 rounded-lg border border-gray-700 overflow-auto">
                       {respuestas[ejercicioActual].codigo}
                     </pre>
-                    <div className="mt-4 bg-blue-50 p-4 rounded-lg border border-blue-100">
-                      <pre className="whitespace-pre-wrap text-sm text-blue-800">
+                    <div className="mt-4 bg-blue-900/30 p-4 rounded-lg border border-blue-500/20">
+                      <pre className="whitespace-pre-wrap text-sm text-blue-200">
                         {respuestas[ejercicioActual].descripcion}
                       </pre>
                     </div>
@@ -142,9 +194,12 @@ export default function Page() {
                     setMostrarRespuesta(false);
                   }}
                   disabled={ejercicioActual === 0}
-                  className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 shadow-lg hover:shadow-blue-500/25 flex items-center gap-2"
                 >
-                  ← Ejercicio Anterior
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                  Anterior
                 </button>
 
                 <button
@@ -155,15 +210,17 @@ export default function Page() {
                     setMostrarRespuesta(false);
                   }}
                   disabled={ejercicioActual === ejercicios.length - 1}
-                  className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:from-blue-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 shadow-lg hover:shadow-blue-500/25 flex items-center gap-2"
                 >
-                  Siguiente Ejercicio →
+                  Siguiente
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </button>
               </div>
             </div>
           </div>
         </div>
-
       </main>
     </div>
   );
