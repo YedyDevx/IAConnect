@@ -6,7 +6,7 @@ interface HeaderProps {
   titulo?: string;
 }
 
-export default function Header({ nivel, titulo }: HeaderProps) {
+export default function Header({ nivel }: HeaderProps) {
   return (
     <header className="bg-gray-900/50 border-b border-gray-800 backdrop-blur-sm sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 py-4">
@@ -45,11 +45,11 @@ export default function Header({ nivel, titulo }: HeaderProps) {
             )}
           </div>
           
-          {titulo && (
+          {/* {titulo && (
             <h1 className="text-xl font-semibold text-white bg-gradient-to-r from-blue-500/10 to-purple-500/10 px-6 py-2 rounded-full border border-gray-800">
               {titulo}
             </h1>
-          )}
+          )} */}
           
           <div className="flex items-center gap-4">
             <a

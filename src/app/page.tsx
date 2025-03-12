@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-900">
-      <Header titulo="Laboratorio de codigo" />
+      <Header />
       <main id="home" className="relative">
         {/* Fondo con overlay gradiente */}
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-900/95 to-gray-900"></div>
@@ -19,8 +19,8 @@ export default function Home() {
               Aprende JavaScript
             </h1>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Una guía interactiva para dominar los fundamentos de JavaScript
-              a través de ejercicios prácticos y ejemplos reales.
+              Una guía interactiva para dominar los fundamentos de JavaScript a
+              través de ejercicios prácticos y ejemplos reales.
             </p>
             {/* <div className="flex items-center justify-center gap-4">
               <a
@@ -58,10 +58,10 @@ export default function Home() {
             </div> */}
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {/* Nivel 1 Card */}
             <Link href="/nivel1" className="group">
-              <div className="h-[280px] bg-gray-900/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-blue-500/20 transition-all duration-300 p-6 border border-gray-800 group-hover:border-blue-500/50 flex flex-col">
+              <div className="h-[180px] bg-gray-900/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-blue-500/20 transition-all duration-300 p-4 border border-gray-800 group-hover:border-blue-500/50 flex flex-col">
                 <div className="flex items-center gap-4">
                   <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg p-3 shadow-lg group-hover:shadow-blue-500/50 transition-all duration-300">
                     <svg
@@ -82,7 +82,6 @@ export default function Home() {
                     <span className="text-sm font-semibold text-blue-400 tracking-wider uppercase">
                       Nivel 1
                     </span>
-                    <h3 className="text-lg font-medium text-white">Fundamentos</h3>
                   </div>
                 </div>
 
@@ -109,7 +108,7 @@ export default function Home() {
 
             {/* Nivel 2 Card */}
             <Link href="/nivel2" className="group">
-              <div className="h-[280px] bg-gray-900/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-green-500/20 transition-all duration-300 p-6 border border-gray-800 group-hover:border-green-500/50 flex flex-col">
+              <div className=" h-[180px] bg-gray-900/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-green-500/20 transition-all duration-300 p-4 border border-gray-800 group-hover:border-green-500/50 flex flex-col">
                 <div className="flex items-center gap-4">
                   <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-lg p-3 shadow-lg group-hover:shadow-green-500/50 transition-all duration-300">
                     <svg
@@ -130,7 +129,6 @@ export default function Home() {
                     <span className="text-sm font-semibold text-green-400 tracking-wider uppercase">
                       Nivel 2
                     </span>
-                    <h3 className="text-lg font-medium text-white">Operaciones Matemáticas</h3>
                   </div>
                 </div>
 
@@ -157,7 +155,7 @@ export default function Home() {
 
             {/* Nivel 3 Card */}
             <Link href="/nivel3" className="group">
-              <div className="h-[280px] bg-gray-900/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-purple-500/20 transition-all duration-300 p-6 border border-gray-800 group-hover:border-purple-500/50 flex flex-col">
+              <div className="h-[180px] bg-gray-900/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-purple-500/20 transition-all duration-300 p-4 border border-gray-800 group-hover:border-purple-500/50 flex flex-col">
                 <div className="flex items-center gap-4">
                   <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg p-3 shadow-lg group-hover:shadow-purple-500/50 transition-all duration-300">
                     <svg
@@ -178,7 +176,6 @@ export default function Home() {
                     <span className="text-sm font-semibold text-purple-400 tracking-wider uppercase">
                       Nivel 3
                     </span>
-                    <h3 className="text-lg font-medium text-white">Estructuras de Control</h3>
                   </div>
                 </div>
 
@@ -205,7 +202,7 @@ export default function Home() {
 
             {/* Nivel 4 Card */}
             <Link href="/nivel4" className="group">
-              <div className="h-[280px] bg-gray-900/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-yellow-500/20 transition-all duration-300 p-6 border border-gray-800 group-hover:border-yellow-500/50 flex flex-col">
+              <div className="h-[180px] bg-gray-900/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-yellow-500/20 transition-all duration-300 p-4 border border-gray-800 group-hover:border-yellow-500/50 flex flex-col">
                 <div className="flex items-center gap-4">
                   <div className="bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg p-3 shadow-lg group-hover:shadow-yellow-500/50 transition-all duration-300">
                     <svg
@@ -226,7 +223,6 @@ export default function Home() {
                     <span className="text-sm font-semibold text-yellow-400 tracking-wider uppercase">
                       Nivel 4
                     </span>
-                    <h3 className="text-lg font-medium text-white">Funciones y Scope</h3>
                   </div>
                 </div>
 
@@ -235,7 +231,7 @@ export default function Home() {
                 </p>
 
                 <div className="mt-auto pt-4 flex items-center text-yellow-400 font-medium group-hover:text-yellow-300 transition-colors">
-                  Descubrir
+                  Continuar
                   <svg
                     className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform"
                     fill="currentColor"
@@ -250,39 +246,6 @@ export default function Home() {
                 </div>
               </div>
             </Link>
-          </div>
-
-          {/* Sección de características */}
-          <div className="mt-20 grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700">
-              <div className="bg-blue-500/10 p-3 rounded-lg w-fit mb-4">
-                <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Ejercicios Prácticos</h3>
-              <p className="text-gray-400 text-sm">Aprende haciendo con ejercicios interactivos y ejemplos del mundo real.</p>
-            </div>
-
-            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700">
-              <div className="bg-green-500/10 p-3 rounded-lg w-fit mb-4">
-                <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Aprendizaje Progresivo</h3>
-              <p className="text-gray-400 text-sm">Avanza a tu propio ritmo con contenido estructurado por niveles.</p>
-            </div>
-
-            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700">
-              <div className="bg-purple-500/10 p-3 rounded-lg w-fit mb-4">
-                <svg className="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">Soluciones Detalladas</h3>
-              <p className="text-gray-400 text-sm">Accede a explicaciones paso a paso y mejores prácticas.</p>
-            </div>
           </div>
         </div>
       </main>

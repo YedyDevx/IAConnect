@@ -40,72 +40,70 @@ export default function Page() {
         </div>
 
         <div className="w-full flex flex-row gap-4">
-          {/* Panel lateral mejorado */}
-          <div className="w-[250px] flex-shrink-0 space-y-4">
-            <div className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 p-6 rounded-xl border border-blue-400/30 shadow-xl hover:shadow-blue-500/20 transition-all duration-300">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-tr from-white/5 to-transparent rounded-lg"></div>
-                <div className="relative">
-                  <div className="flex items-center gap-2 mb-3">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 text-blue-300"
+          {/* Panel lateral con proporciones ajustadas */}
+          <div className="w-[280px] flex-shrink-0">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700">
+              {/* Encabezado más compacto */}
+              <div className="flex items-center gap-3 mb-6">
+                <div className="bg-blue-500/20 p-2 rounded-lg">
+                  <svg 
+                    className="w-5 h-5 text-blue-400" 
                       fill="none"
+                    stroke="currentColor" 
                       viewBox="0 0 24 24"
-                      stroke="currentColor"
                     >
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
-                        d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" 
                       />
                     </svg>
-                    <h3 className="text-xl font-bold text-white">Editor Online</h3>
                   </div>
-                  <p className="text-blue-100 text-sm leading-relaxed mb-4">
-                    Usa PlayCode para practicar JavaScript sin instalar nada.
+                <div>
+                  <h3 className="text-lg font-semibold text-white">Nivel 1</h3>
+                  <p className="text-sm text-gray-400">
+                    {ejercicioActual + 1} de {ejercicios.length} ejercicios
                   </p>
-                  <a
-                    href="https://playcode.io/javascript"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group bg-white/10 hover:bg-white/20 text-white px-4 py-3 rounded-lg font-medium flex items-center justify-center gap-2 transition-all duration-200"
-                  >
-                    <span>Comenzar ahora</span>
-                    <svg
-                      className="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      />
-                    </svg>
-                  </a>
+                </div>
+                </div>
+
+              {/* Porcentaje circular más pequeño */}
+              <div className="flex justify-center mb-6">
+                <div className="relative">
+                  <svg className="w-24 h-24 transform -rotate-90">
+                    <circle
+                      className="text-gray-700"
+                      strokeWidth="6"
+                      stroke="currentColor"
+                      fill="transparent"
+                      r="42"
+                      cx="48"
+                      cy="48"
+                    />
+                    <circle
+                      className="text-blue-500"
+                      strokeWidth="6"
+                      strokeDasharray={42 * 2 * Math.PI}
+                      strokeDashoffset={42 * 2 * Math.PI * (1 - ((ejercicioActual + 1) / ejercicios.length))}
+                      strokeLinecap="round"
+                      stroke="currentColor"
+                      fill="transparent"
+                      r="42"
+                      cx="48"
+                      cy="48"
+                    />
+                  </svg>
+                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+                    <span className="text-2xl font-bold text-white">
+                      {Math.round(((ejercicioActual + 1) / ejercicios.length) * 100)}%
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-           {/* Progreso del nivel */}
-           <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-lg font-semibold text-white">Progreso</h3>
-                <span className="text-sm text-blue-400">
-                  {ejercicioActual + 1}/{ejercicios.length}
-                </span>
-              </div>
-              
-              {/* Barra de progreso */}
-              <div className="w-full h-2 bg-gray-700 rounded-full mb-6 overflow-hidden">
-                <div 
-                  className="h-full bg-gradient-to-r from-blue-500 to-blue-600 rounded-full transition-all duration-300"
-                  style={{ width: `${((ejercicioActual + 1) / ejercicios.length) * 100}%` }}
-                />
-              </div>
-
-              <div className="grid grid-cols-2 gap-2">
+              {/* Grid de ejercicios más compacto */}
+              <div className="grid grid-cols-4 gap-2 mb-4">
                 {ejercicios.map((_, index) => (
                   <button
                     key={index}
@@ -113,34 +111,45 @@ export default function Page() {
                       setEjercicioActual(index);
                       setMostrarRespuesta(false);
                     }}
-                    className={`relative group ${
-                      index === ejercicioActual
-                        ? "bg-gradient-to-r from-blue-500 to-blue-600"
-                        : "bg-gray-700/50 hover:bg-gray-700"
-                    } rounded-lg transition-all duration-300`}
+                    className={`
+                      aspect-square rounded-lg transition-all duration-300 relative
+                      ${index === ejercicioActual 
+                        ? 'bg-gradient-to-br from-blue-500 to-blue-600 shadow-sm shadow-blue-500/25' 
+                        : index < ejercicioActual
+                          ? 'bg-gradient-to-br from-green-500 to-green-600'
+                          : 'bg-gray-700/50'
+                      }
+                      ${index > ejercicioActual ? 'hover:bg-gray-700' : ''}
+                    `}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg" />
-                    <div className="relative p-3 flex flex-col items-center">
-                      <span className={`text-sm font-medium ${
-                        index === ejercicioActual ? "text-white" : "text-gray-300"
-                      }`}>
-                        {index + 1}
-                      </span>
-                      {index <= ejercicioActual && (
-                        <div className="absolute -top-1 -right-1">
-                          <span className="flex h-3 w-3">
-                            <span className={`animate-ping absolute inline-flex h-full w-full rounded-full ${
-                              index === ejercicioActual ? "bg-blue-400" : "bg-green-400"
-                            } opacity-75`}></span>
-                            <span className={`relative inline-flex rounded-full h-3 w-3 ${
-                              index === ejercicioActual ? "bg-blue-500" : "bg-green-500"
-                            }`}></span>
-                          </span>
-                        </div>
-                      )}
-                    </div>
+                    <span className={`text-sm font-medium ${
+                      index <= ejercicioActual ? 'text-white' : 'text-gray-400'
+                    }`}>
+                      {index + 1}
+                    </span>
+                    {index < ejercicioActual && (
+                      <svg className="w-3 h-3 text-white absolute bottom-1 right-1" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                      </svg>
+                    )}
                   </button>
                 ))}
+              </div>
+
+              {/* Leyenda más compacta */}
+              <div className="flex flex-col gap-2 text-xs">
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 rounded-full bg-gradient-to-br from-green-500 to-green-600"></div>
+                  <span className="text-gray-400">Completado</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 rounded-full bg-gradient-to-br from-blue-500 to-blue-600"></div>
+                  <span className="text-gray-400">Actual</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 rounded-full bg-gray-700"></div>
+                  <span className="text-gray-400">Pendiente</span>
+                </div>
               </div>
             </div>
           </div>
