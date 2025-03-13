@@ -3,26 +3,26 @@ import Header from "@/components/shared/Header/Header";
 import Link from "next/link";
 
 export default function Home() {
-  return (
-    <div className="min-h-screen bg-gray-900">
-      <Header />
-      <main id="home" className="relative">
-        {/* Fondo con overlay gradiente */}
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-900/95 to-gray-900"></div>
+	return (
+		<div className="min-h-screen bg-gray-900">
+			<Header />
+			<main id="home" className="relative">
+				{/* Fondo con overlay gradiente */}
+				<div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-900/95 to-gray-900"></div>
 
-        <div className="relative max-w-6xl mx-auto px-4 py-16">
-          <div className="text-center mb-16 space-y-6">
-            <h5 className="text-blue-400 text-sm font-medium tracking-wider uppercase">
-              Laboratorio de Código Z
-            </h5>
-            <h1 className="text-6xl font-bold text-white mb-4 bg-clip-text  bg-gradient-to-r from-white to-gray-300">
-              Aprende JavaScript
-            </h1>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Una guía interactiva para dominar los fundamentos de JavaScript a
-              través de ejercicios prácticos y ejemplos reales.
-            </p>
-            {/* <div className="flex items-center justify-center gap-4">
+				<div className="relative max-w-6xl mx-auto px-4 py-16">
+					<div className="text-center mb-16 space-y-6">
+						<h5 className="text-blue-400 text-sm font-medium tracking-wider uppercase">
+							Laboratorio de Código Z
+						</h5>
+						<h1 className="text-6xl font-bold text-white mb-4 bg-clip-text  bg-gradient-to-r from-white to-gray-300">
+							Aprende JavaScript
+						</h1>
+						<p className="text-xl text-gray-400 max-w-2xl mx-auto">
+							Una guía interactiva para dominar los fundamentos de JavaScript a
+							través de ejercicios prácticos y ejemplos reales.
+						</p>
+						{/* <div className="flex items-center justify-center gap-4">
               <a
                 href="https://playcode.io/javascript"
                 target="_blank"
@@ -56,199 +56,246 @@ export default function Home() {
                 Ver en GitHub
               </a>
             </div> */}
-          </div>
+					</div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {/* Nivel 1 Card */}
-            <Link href="/nivel1" className="group">
-              <div className="h-[180px] bg-gray-900/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-blue-500/20 transition-all duration-300 p-4 border border-gray-800 group-hover:border-blue-500/50 flex flex-col">
-                <div className="flex items-center gap-4">
-                  <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg p-3 shadow-lg group-hover:shadow-blue-500/50 transition-all duration-300">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <span className="text-sm font-semibold text-blue-400 tracking-wider uppercase">
-                      Nivel 1
-                    </span>
-                  </div>
-                </div>
+					<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+						{/* Nivel 1 Card */}
+						<Link href="/nivel1" className="group">
+							<div className="h-[180px] bg-gray-900/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-blue-500/20 transition-all duration-300 p-4 border border-gray-800 group-hover:border-blue-500/50 flex flex-col">
+								<div className="flex items-center gap-4">
+									<div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg p-3 shadow-lg group-hover:shadow-blue-500/50 transition-all duration-300">
+										<svg
+											className="w-6 h-6 text-white"
+											fill="none"
+											stroke="currentColor"
+											viewBox="0 0 24 24"
+										>
+											<path
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												strokeWidth="2"
+												d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+											/>
+										</svg>
+									</div>
+									<div>
+										<span className="text-sm font-semibold text-blue-400 tracking-wider uppercase">
+											Nivel 1
+										</span>
+									</div>
+								</div>
 
-                <p className="text-gray-400 text-sm mt-4 flex-grow">
-                  Variables, tipos de datos y operaciones básicas en JavaScript.
-                </p>
+								<p className="text-gray-400 text-sm mt-4 flex-grow">
+									Variables, tipos de datos y operaciones básicas en JavaScript.
+								</p>
 
-                <div className="mt-auto pt-4 flex items-center text-blue-400 font-medium group-hover:text-blue-300 transition-colors">
-                  Comenzar
-                  <svg
-                    className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </Link>
+								<div className="mt-auto pt-4 flex items-center text-blue-400 font-medium group-hover:text-blue-300 transition-colors">
+									Comenzar
+									<svg
+										className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform"
+										fill="currentColor"
+										viewBox="0 0 20 20"
+									>
+										<path
+											fillRule="evenodd"
+											d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+											clipRule="evenodd"
+										/>
+									</svg>
+								</div>
+							</div>
+						</Link>
 
-            {/* Nivel 2 Card */}
-            <Link href="/nivel2" className="group">
-              <div className=" h-[180px] bg-gray-900/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-green-500/20 transition-all duration-300 p-4 border border-gray-800 group-hover:border-green-500/50 flex flex-col">
-                <div className="flex items-center gap-4">
-                  <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-lg p-3 shadow-lg group-hover:shadow-green-500/50 transition-all duration-300">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <span className="text-sm font-semibold text-green-400 tracking-wider uppercase">
-                      Nivel 2
-                    </span>
-                  </div>
-                </div>
+						{/* Nivel 2 Card */}
+						<Link href="/nivel2" className="group">
+							<div className=" h-[180px] bg-gray-900/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-green-500/20 transition-all duration-300 p-4 border border-gray-800 group-hover:border-green-500/50 flex flex-col">
+								<div className="flex items-center gap-4">
+									<div className="bg-gradient-to-br from-green-500 to-green-600 rounded-lg p-3 shadow-lg group-hover:shadow-green-500/50 transition-all duration-300">
+										<svg
+											className="w-6 h-6 text-white"
+											fill="none"
+											stroke="currentColor"
+											viewBox="0 0 24 24"
+										>
+											<path
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												strokeWidth="2"
+												d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+											/>
+										</svg>
+									</div>
+									<div>
+										<span className="text-sm font-semibold text-green-400 tracking-wider uppercase">
+											Nivel 2
+										</span>
+									</div>
+								</div>
 
-                <p className="text-gray-400 text-sm mt-4 flex-grow">
-                  Operaciones matemáticas y manipulación de datos en JavaScript.
-                </p>
+								<p className="text-gray-400 text-sm mt-4 flex-grow">
+									Operaciones matemáticas y manipulación de datos en JavaScript.
+								</p>
 
-                <div className="mt-auto pt-4 flex items-center text-green-400 font-medium group-hover:text-green-300 transition-colors">
-                  Explorar
-                  <svg
-                    className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </Link>
+								<div className="mt-auto pt-4 flex items-center text-green-400 font-medium group-hover:text-green-300 transition-colors">
+									Explorar
+									<svg
+										className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform"
+										fill="currentColor"
+										viewBox="0 0 20 20"
+									>
+										<path
+											fillRule="evenodd"
+											d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+											clipRule="evenodd"
+										/>
+									</svg>
+								</div>
+							</div>
+						</Link>
 
-            {/* Nivel 3 Card */}
-            <Link href="/nivel3" className="group">
-              <div className="h-[180px] bg-gray-900/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-purple-500/20 transition-all duration-300 p-4 border border-gray-800 group-hover:border-purple-500/50 flex flex-col">
-                <div className="flex items-center gap-4">
-                  <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg p-3 shadow-lg group-hover:shadow-purple-500/50 transition-all duration-300">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <span className="text-sm font-semibold text-purple-400 tracking-wider uppercase">
-                      Nivel 3
-                    </span>
-                  </div>
-                </div>
+						{/* Nivel 3 Card */}
+						<Link href="/nivel3" className="group">
+							<div className="h-[180px] bg-gray-900/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-purple-500/20 transition-all duration-300 p-4 border border-gray-800 group-hover:border-purple-500/50 flex flex-col">
+								<div className="flex items-center gap-4">
+									<div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg p-3 shadow-lg group-hover:shadow-purple-500/50 transition-all duration-300">
+										<svg
+											className="w-6 h-6 text-white"
+											fill="none"
+											stroke="currentColor"
+											viewBox="0 0 24 24"
+										>
+											<path
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												strokeWidth="2"
+												d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"
+											/>
+										</svg>
+									</div>
+									<div>
+										<span className="text-sm font-semibold text-purple-400 tracking-wider uppercase">
+											Nivel 3
+										</span>
+									</div>
+								</div>
 
-                <p className="text-gray-400 text-sm mt-4 flex-grow">
-                  Trabajando con estructuras de control y ciclos en JavaScript.
-                </p>
+								<p className="text-gray-400 text-sm mt-4 flex-grow">
+									Trabajando con estructuras de control y ciclos en JavaScript.
+								</p>
 
-                <div className="mt-auto pt-4 flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors">
-                  Descubrir
-                  <svg
-                    className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </Link>
+								<div className="mt-auto pt-4 flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors">
+									Descubrir
+									<svg
+										className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform"
+										fill="currentColor"
+										viewBox="0 0 20 20"
+									>
+										<path
+											fillRule="evenodd"
+											d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+											clipRule="evenodd"
+										/>
+									</svg>
+								</div>
+							</div>
+						</Link>
 
-            {/* Nivel 4 Card */}
-            <Link href="/nivel4" className="group">
-              <div className="h-[180px] bg-gray-900/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-yellow-500/20 transition-all duration-300 p-4 border border-gray-800 group-hover:border-yellow-500/50 flex flex-col">
-                <div className="flex items-center gap-4">
-                  <div className="bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg p-3 shadow-lg group-hover:shadow-yellow-500/50 transition-all duration-300">
-                    <svg
-                      className="w-6 h-6 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                      />
-                    </svg>
-                  </div>
-                  <div>
-                    <span className="text-sm font-semibold text-yellow-400 tracking-wider uppercase">
-                      Nivel 4
-                    </span>
-                  </div>
-                </div>
+						{/* Nivel 4 Card */}
+						<Link href="/nivel4" className="group">
+							<div className="h-[180px] bg-gray-900/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-yellow-500/20 transition-all duration-300 p-4 border border-gray-800 group-hover:border-yellow-500/50 flex flex-col">
+								<div className="flex items-center gap-4">
+									<div className="bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg p-3 shadow-lg group-hover:shadow-yellow-500/50 transition-all duration-300">
+										<svg
+											className="w-6 h-6 text-white"
+											fill="none"
+											stroke="currentColor"
+											viewBox="0 0 24 24"
+										>
+											<path
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												strokeWidth="2"
+												d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+											/>
+										</svg>
+									</div>
+									<div>
+										<span className="text-sm font-semibold text-yellow-400 tracking-wider uppercase">
+											Nivel 4
+										</span>
+									</div>
+								</div>
 
-                <p className="text-gray-400 text-sm mt-4 flex-grow">
-                  Trabajando con funciones y scope.
-                </p>
+								<p className="text-gray-400 text-sm mt-4 flex-grow">
+									Trabajando con funciones y scope.
+								</p>
 
-                <div className="mt-auto pt-4 flex items-center text-yellow-400 font-medium group-hover:text-yellow-300 transition-colors">
-                  Continuar
-                  <svg
-                    className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </main>
-    </div>
-  );
+								<div className="mt-auto pt-4 flex items-center text-yellow-400 font-medium group-hover:text-yellow-300 transition-colors">
+									Continuar
+									<svg
+										className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform"
+										fill="currentColor"
+										viewBox="0 0 20 20"
+									>
+										<path
+											fillRule="evenodd"
+											d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+											clipRule="evenodd"
+										/>
+									</svg>
+								</div>
+							</div>
+						</Link>
+
+						{/* Nivel 5 Card */}
+						<Link href="/nivel5" className="group">
+							<div className="h-[180px] bg-gray-900/50 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-red-500/20 transition-all duration-300 p-4 border border-gray-800 group-hover:border-red-500/50 flex flex-col">
+								<div className="flex items-center gap-4">
+									<div className="bg-gradient-to-br from-red-500 to-red-600 rounded-lg p-3 shadow-lg group-hover:shadow-red-500/50 transition-all duration-300">
+										<svg
+											className="w-6 h-6 text-white"
+											fill="none"
+											stroke="currentColor"
+											viewBox="0 0 24 24"
+										>
+											<path
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												strokeWidth="2"
+												d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+											/>
+										</svg>
+									</div>
+									<div>
+										<span className="text-sm font-semibold text-red-400 tracking-wider uppercase">
+											Nivel 5
+										</span>
+									</div>
+								</div>
+
+								<p className="text-gray-400 text-sm mt-4 flex-grow">
+									Trabajando con funciones y scope.
+								</p>
+
+								<div className="mt-auto pt-4 flex items-center text-red-400 font-medium group-hover:text-red-300 transition-colors">
+									Continuar
+									<svg
+										className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform"
+										fill="currentColor"
+										viewBox="0 0 20 20"
+									>
+										<path
+											fillRule="evenodd"
+											d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+											clipRule="evenodd"
+										/>
+									</svg>
+								</div>
+							</div>
+						</Link>
+					</div>
+				</div>
+			</main>
+		</div>
+	);
 }
