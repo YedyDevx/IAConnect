@@ -9,7 +9,7 @@ export default function Page() {
 
   return (
     <div className="min-h-screen bg-gray-900">
-      <Header nivel={2} titulo="Operaciones Matemáticas" />
+      <Header nivel={4} titulo="Funciones y Scope" />
       <main className="max-w-6xl mx-auto min-h-screen p-6 flex flex-col gap-6">
         <header className="text-center mb-8">
           <h1 className="text-4xl font-bold text-white mb-2">
